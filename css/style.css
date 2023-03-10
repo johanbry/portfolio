@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Source+Sans+Pro:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1 {
+  font-family: "Fugaz One", cursive;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-family: "Fugaz One", cursive;
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-family: "Fugaz One", cursive;
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+a {
+  color: white;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  background-color: #0d86c5;
+  color: white;
+  padding: 0.5rem 4rem;
+  box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
+}
+
+header .logo_text {
+  font-family: "Fugaz One", cursive;
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px #000000;
+  transition-duration: 0.4s;
+}
+
+header .logo_text a {
+  color: white;
+  text-decoration: none;
+}
+
+header ul {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+}
+
+header ul li a {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: white;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+
+header ul li a:hover {
+  text-shadow: 2px 2px 4px #00000077;
+}
+
+#welcome {
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  /* padding-top: 4rem; */
+  /*background-color: #0D86C5;*/
+  background-image: linear-gradient(210deg, #045079, #0d86c5);
+  box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
+}
+
+#welcome_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /*max-width: 1200px;*/
+  margin: auto;
+  padding: 0 0 0 4rem;
+  border: 0px yellow solid;
+}
+
+#introtext {
+  position: absolute;
+  left: 15vw;
+  top: 50vh;
+  z-index: 99;
+  border: 0px orange solid;
+  color: white;
+  text-shadow: 1px 1px 2px #0000005a;
+}
+
+#introtext h1 {
+  font-size: 3.2rem;
+  margin-bottom: 0px;
+}
+
+#introtext h2 {
+  font-size: 2.9rem;
+  padding-left: 7rem;
+  margin-top: -1.4rem;
+}
+
+#introtext h3 {
+  font-size: 1.8rem;
+  padding-left: 2.4rem;
+  margin-bottom: -1rem;
+}
+
+#introtext p {
+  font-size: 1rem;
+  max-width: 30rem;
+}
+
+#introimage {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 95%;
+  border: 0px green solid;
+  overflow: hidden;
+}
+
+#introimage img {
+  width: auto;
+  height: 100%;
+  float: right;
+  opacity: 30%;
+}
+
+#about {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.aboutme {
+  background-color: #05689d;
+  color: white;
+  flex: 55%;
+  padding: 4rem;
+}
+
+.aboutboxes {
+  flex: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  width: 100%;
+  padding: 3rem;
+  color: white;
+  flex: 1 1 50%;
+  /*min-height: 50%;*/
+  list-style-position: inside;
+}
+
+.skillsbox {
+  background-color: #3396cb;
+}
+
+.skillsbox ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style-type: none;
+}
+
+.skillsbox ul li {
+  display: inline-block;
+  background-color: #045079;
+  padding: 0.5rem 1rem;
+  /*margin: 0.5rem;*/
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.educationbox {
+  background-image: url("/assets/pexels-negative-space-34600.jpg");
+  background-size: cover;
+  min-height: 200px;
+}
+
+#projects {
+  width: 100%;
+  padding: 4rem 4rem;
+}
+
+.sectionheadcentered {
+  text-align: center;
+}
+
+.projectscontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.projectsitem {
+  background-size: cover;
+  flex: 1;
+  height: 250px;
+  min-width: 280px;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+.projectsbutton {
+  background-color: #ffffff;
+  padding: 0.5rem;
+  border: 0px;
+  border-radius: 3px;
+}
+
+.projectsbutton a {
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.project-da {
+  background-image: url("/assets/daveart.jpeg");
+  flex: 2;
+}
+
+.project-shop {
+  background-image: url("/assets/pexels-negative-space-34600.jpg");
+  flex: 1;
+}
+
+.project-jx {
+  background-image: url("/assets/jolex.jpg");
+  flex: 2;
+}
+
+#contact {
+  width: 100%;
+  background-color: #0d86c5;
+  color: white;
+  padding: 4rem 4rem;
+}
+
+.contacticons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 3rem;
+}
+
+footer {
+  width: 100%;
+  height: 3rem;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+#projectdaveart {
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+  padding: 4rem;
+}
+
+.projectinfo {
+  flex: 50%;
+}
+
+.projectimage {
+  flex: 50%;
+}
+
+.projectimage img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #about {
+    flex-direction: column;
+  }
+
+  header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  header .logo_text {
+    font-size: 1.8rem;
+  }
+
+  header ul li a {
+    font-size: 0.9rem;
+  }
+
+  #introtext {
+    left: 10vw;
+  }
+
+  #introtext h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0px;
+  }
+
+  #introtext h2 {
+    font-size: 2.2rem;
+    margin-top: -1.2rem;
+  }
+
+  #introtext h3 {
+    font-size: 1.5rem;
+    margin-bottom: -0.8rem;
+  }
+
+  #introtext p {
+    font-size: 1rem;
+    max-width: 30rem;
+  }
+  #projectdaveart {
+    flex-direction: column;
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  header {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  header .logo_text {
+    font-size: 1.3rem;
+  }
+
+  header ul li a {
+    font-size: 0.8rem;
+  }
+
+  #welcome {
+    height: 50vh;
+    min-height: 300px;
+    padding-top: 4rem;
+  }
+
+  header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #introtext {
+    left: 05vw;
+    top: 25vh;
+  }
+
+  #introtext h1 {
+    font-size: 2rem;
+    margin-bottom: 0px;
+  }
+
+  #introtext h2 {
+    font-size: 1.5rem;
+    margin-top: -1rem;
+  }
+
+  #introtext h3 {
+    font-size: 1rem;
+    margin-bottom: -0.5rem;
+  }
+
+  #introtext p {
+    display: none;
+  }
+
+  .aboutme {
+    padding: 1rem;
+  }
+
+  .aboutboxes {
+    flex-direction: column;
+  }
+
+  #projects {
+    padding: 2rem 1rem;
+  }
+
+  #projectdaveart {
+    padding: 2rem 1rem;
+  }
+
+  .box {
+    width: 100%;
+    padding: 1rem;
+  }
+}
