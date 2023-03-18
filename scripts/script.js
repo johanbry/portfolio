@@ -18,17 +18,16 @@ const printRepos = (repos, error) => {
   const repoContainer = document.getElementById("repo-container");
   if (!error) {
     repos.forEach((element) => {
-      repoContainer.insertAdjacentHTML(
-        "beforeend",
-        `<a href="${element.html_url}">${element.name}</a> Created ${new Date(
-          element.created_at
-        ).toLocaleDateString()}<br>`
-      );
-      if (element.description)
-        repoContainer.insertAdjacentHTML(
-          "beforeend",
-          `<i>${element.description}</i><br>`
-        );
+      let output = "";
+      output = `<div><a href="${element.html_url}">${
+        element.name
+      }</a> [skapad ${new Date(element.created_at).toLocaleDateString()}]`;
+
+      if (element.description) output += `<br><i>${element.description}</i>`;
+
+      output += "</div>";
+
+      repoContainer.insertAdjacentHTML("beforeend", output);
     });
   } else {
     repoContainer.insertAdjacentHTML(
