@@ -223,6 +223,11 @@ header ul li a:hover {
   min-height: 200px;
 }
 
+.shadow {
+  -webkit-filter: drop-shadow(1px 3px 3px #666666);
+  filter: drop-shadow(1px 3px 3px #666666);
+}
+
 #featured {
   display: flex;
   flex-direction: row;
@@ -246,8 +251,6 @@ header ul li a:hover {
 }
 
 #featured-image > img {
-  -webkit-filter: drop-shadow(5px 5px 5px #666666);
-  filter: drop-shadow(5px 5px 5px #666666);
   max-height: 80%;
   max-width: 70%;
   min-width: 300px;
@@ -283,66 +286,95 @@ header ul li a:hover {
   min-height: 300px;
 }
 
-#projects {
+#daveart {
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  padding: 4rem 4rem;
+  height: 100%;
 }
 
-.sectionheadcentered {
-  text-align: center;
-}
-
-.projectscontainer {
+#daveart .textbox {
+  flex: 50%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.projectsitem {
-  background-size: cover;
-  flex: 1;
-  height: 250px;
-  min-width: 280px;
-  padding: 1rem;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   align-items: flex-start;
-  text-shadow: 1px 1px 2px #000000;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.projectsbutton {
-  background-color: #ffffff;
-  padding: 0.5rem;
-  border: 0px;
-  border-radius: 3px;
+#daveart-image {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.projectsbutton a {
-  color: #000000;
-  text-decoration: none;
-  text-transform: uppercase;
-  cursor: pointer;
+#daveart-image > img {
+  max-height: 80%;
+  max-width: 90%;
+  min-width: 300px;
 }
 
-.project-da {
-  background-image: url("/assets/daveart.jpeg");
-  flex: 2;
+#airbrushshop {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  background-color: #efefef;
 }
 
-.project-shop {
-  background-image: url("/assets/pexels-negative-space-34600.jpg");
-  flex: 1;
+#airbrushshop .textbox {
+  flex: 50%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.project-jx {
-  background-image: url("/assets/jolex.jpg");
-  flex: 2;
+#airbrushshop-image {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#airbrushshop-image > img {
+  max-height: 80%;
+  max-width: 90%;
+  min-width: 300px;
+}
+
+#jolex {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+#jolex .textbox {
+  flex: 50%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#jolex-image {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#jolex-image > img {
+  max-height: 80%;
+  max-width: 90%;
+  min-width: 300px;
 }
 
 #contact {
+  display: flex;
+  justify-content: center;
+  text-align: center;
   width: 100%;
   background-color: #0d86c5;
   color: white;
@@ -365,23 +397,22 @@ footer {
   text-align: center;
 }
 
-#projectdaveart {
-  display: flex;
-  gap: 3rem;
-  width: 100%;
-  padding: 4rem;
-}
+@media screen and (max-width: 1024px) {
+  #daveart,
+  #jolex {
+    flex-direction: column-reverse;
+  }
 
-.projectinfo {
-  flex: 50%;
-}
+  #airbrushshop {
+    flex-direction: column;
+  }
 
-.projectimage {
-  flex: 50%;
-}
-
-.projectimage img {
-  width: 100%;
+  #daveart-image > img,
+  #airbrushshop-image > img,
+  #jolex-image > img {
+    max-width: 600px;
+    margin-top: 4rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -430,10 +461,6 @@ footer {
   #introtext p {
     font-size: 1rem;
     max-width: 30rem;
-  }
-  #projectdaveart {
-    flex-direction: column;
-    padding: 2rem;
   }
 }
 
@@ -509,14 +536,6 @@ footer {
 
   .aboutboxes {
     flex-direction: column;
-  }
-
-  #projects {
-    padding: 2rem 1rem;
-  }
-
-  #projectdaveart {
-    padding: 2rem 1rem;
   }
 
   .box {
