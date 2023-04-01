@@ -548,10 +548,6 @@ footer {
     display: none;
   }
 
-  .aboutme {
-    padding: 1rem;
-  }
-
   .aboutboxes {
     flex-direction: column;
   }
@@ -562,6 +558,6 @@ footer {
   }
 
   .textbox {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 }
