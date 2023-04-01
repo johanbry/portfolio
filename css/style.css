@@ -30,6 +30,15 @@ h3 {
   font-size: 1.2rem;
 }
 
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 p {
   margin: 0 0 1rem 0;
   font-size: 1.2rem;
@@ -90,6 +99,7 @@ header ul li a {
 
 header ul li a:hover {
   text-shadow: 2px 2px 4px #00000077;
+  text-decoration: none;
 }
 
 #welcome {
@@ -172,6 +182,14 @@ header ul li a:hover {
   background-color: #05689d;
   color: white;
   flex: 55%;
+}
+
+.dark a {
+  color: white;
+}
+
+.bright a {
+  color: black;
 }
 
 .textbox {
